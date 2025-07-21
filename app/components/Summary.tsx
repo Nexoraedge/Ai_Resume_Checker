@@ -24,7 +24,7 @@ const Category = ({ tile, score }: { tile: string, score: number }) => {
 }
 
 const Summary = ({ feedback }: { feedback: Feedback }) => {
-  console.log(feedback.ATS);
+  // console.log(feedback.ATS);
 
 
   return (
