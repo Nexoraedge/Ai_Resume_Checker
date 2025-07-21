@@ -28,7 +28,7 @@ const auth = () => {
             <div className="gradient-border shadow-lg">
                 <section className="flex flex-col rounded-2xl gap-8 bg-white p-10">
                     <div className="flex flex-col items-center text-center gap-2">
-                        <h1>Welcome</h1>
+                        <h1 className=" xl:tracking-[-2px] max-sm:text-[3rem] ">Welcome</h1>
                         <h2>Log in to continue your Job Journey</h2>
                     </div>
                     {isLoading?(

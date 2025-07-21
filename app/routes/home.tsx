@@ -29,7 +29,7 @@ export default function Home() {
     <Navbar />
       <section className="main-section md:mx-15 mx-2">
       <div className="page-heading max-sm:gap-4 gap-8 min-h-[80px]">
-        <h1>Track  Your application & Resume ATS</h1>
+        <h1 className=" xl:tracking-[-2px] max-sm:text-[3rem] ">Track  Your application & Resume ATS</h1>
         <p>Review Your Submissions with Ai powered Feedback</p>
       </div>
     {resumes.length>0 && (
