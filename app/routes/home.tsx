@@ -25,7 +25,7 @@ export default function Home() {
   }, [auth.isAuthenticated ])
   
 
-  return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+  return <main className=" pt-10 bg-[url('/images/bg-main.svg')] bg-cover">
     <Navbar />
       <section className="main-section md:mx-15 mx-2">
       <div className="page-heading max-sm:gap-4 gap-8 min-h-[80px]">

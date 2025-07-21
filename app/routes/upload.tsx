@@ -93,7 +93,7 @@ const upload = () => {
     }
     return (
 
-        <main className='bg-[url("/images/bg-main.svg")] max-md:px-4 max-sm:px-2 bg-cover'>
+        <main className='bg-[url("/images/bg-main.svg")] max-md:px-4 max-sm:px-2 bg-cover pt-10'>
             <Navbar  />
             <section className='main-section md:mx-15  mx-8'>
                 <div className="page-heading">
@@ -102,7 +102,7 @@ const upload = () => {
                     </h1>
                     {isProcessing ? (
                         <>
-                            <h2>
+                            <h2 className="mt-5">
                                 {StatusText}
                             </h2>
                             <img src="/images/resume-scan.gif" alt="is processing" className='w-full mx-auto' />
