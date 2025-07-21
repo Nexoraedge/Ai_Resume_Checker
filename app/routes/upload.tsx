@@ -28,6 +28,11 @@ const upload = () => {
            return setStatusText('Failed to convert PDF to Image')
         }
         const {file} = imageFile;
+        
+        if (!file) {
+            return setStatusText('Error: No file generated from PDF conversion')
+        }
+        
         setStatusText('Uploading the image...');
         const uploadImage  = await fs.upload([file]);
         if(!uploadImage){
@@ -64,7 +69,7 @@ const upload = () => {
         await kv.set(`resume:${uuid}` , JSON.stringify(data))
         setStatusText('Analysis completed. Redirecting...');
          console.log(data);
-         
+         navigate(`/resume/${uuid}`)
 
 
     }
@@ -88,11 +93,11 @@ const upload = () => {
     }
     return (
 
-        <main className='bg-[url("/images/bg-main.svg")] bg-cover'>
-            <Navbar />
+        <main className='bg-[url("/images/bg-main.svg")] max-md:px-4 max-sm:px-2 bg-cover'>
+            <Navbar  />
             <section className='main-section md:mx-15  mx-8'>
                 <div className="page-heading">
-                    <h1 className=" xl:tracking-[-2px] max-sm:text-xl ">
+                    <h1 className=" xl:tracking-[-2px]  ">
                         Smart Feedback for your dream Job
                     </h1>
                     {isProcessing ? (
@@ -100,10 +105,10 @@ const upload = () => {
                             <h2>
                                 {StatusText}
                             </h2>
-                            <img src="/images/resume-scan.gif" alt="is processing" className='w-full' />
+                            <img src="/images/resume-scan.gif" alt="is processing" className='w-full mx-auto' />
                         </>
                     ) : (
-                        <h2>Drop your resume for an ATS Score and improvements tips</h2>
+                        <h2 className="mt-5">Drop your resume for an ATS Score and improvements tips</h2>
                     )}
                     {
                         !isProcessing && (

@@ -27,11 +27,11 @@ main {
   @apply min-h-screen pt-10;
 }
 h1 {
-  @apply  text-6xl  text-gradient leading-tight  font-semibold;
+  @apply  sm:text-6xl text-[2.5rem] text-gradient leading-tight  font-semibold;
 }
 
 h2 {
-  @apply max-sm:text-xl text-3xl text-dark-200;
+  @apply text-xl sm:text-3xl text-dark-200;
 }
 
 label {
@@ -95,7 +95,7 @@ form {
   }
 
   .navbar {
-    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto;
+    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 ;
   }
 
   .score-badge {
